@@ -5,8 +5,8 @@ date:   2018-11-30 23:20:00
 tags: Xfce Open-source
 ---
 
-Once in while someone comes around and ask *hey, I love Xfce and would like to contribute, but where do I start? How can I be of use? How to can I implement a fancy new feature?*, of course the answer is 42. Unfortunately there is no such no one-size-fits-all answer, actually to properly give meaningful guidance, a couple of questions should be asked first, e.g. do you have any programming skills? What exactly do you want to improve?
-It's been a long time since I've been planning to write a comprehensive guide, I hope this to be helpful to hitchhikers, I mean new contributors.
+Once in while someone comes around and ask *hey, I love Xfce and would like to contribute, but where do I start? How can I be of use? How can I implement a fancy new feature?*, of course the answer is 42. Unfortunately there is no such one-size-fits-all answer, actually to properly give meaningful guidance, a couple of questions should be asked first, e.g. do you have any programming skills? What exactly do you want to improve?
+It's been a long time since I've been planning to write a comprehensive guide, I hope this to be helpful to hitchhikers and new contributors.
 As any open source project, there are several ways to collaborate, everyone is welcome to help in any or many ways he/she is able.
 
 ## Translation
@@ -17,9 +17,11 @@ Xfce uses gettext which generates .po files from source code. You can view those
 
 Fortunately, translators don't need to know terminal commands or any complex tool, since Xfce translations are handled in [Transifex](https://www.transifex.com/xfce/), a web-based translation platform. At that link you can see the overview of the current status of translations.
 
-Once you sign up, you can ask to join the a translation team. Be patient, it may take a while to a coordinator to approve your request. If you think your request is taking longer than it should, say a couple weeks, please poke us via the [translation mailing list](https://mail.xfce.org/mailman/listinfo/xfce-i18n) or directly at IRC channel #xfce-dev (more about this later).
+Once you sign up, you can ask to join a translation team. Be patient, it may take a while for a coordinator to approve your request. If you think your request is taking longer than it should, say a couple weeks, please poke us via the [translation mailing list](https://mail.xfce.org/mailman/listinfo/xfce-i18n) or directly at IRC channel #xfce-dev (more about this later).
 
 After joining a team, transifex should be quite intuitive, there is even a comments section in case of doubts for a particular text to be translated, but developers are not notified, so I recommend to use the mailing list or [bug tracker](https://bugzilla.xfce.org/).
+
+For further details as well check the [related xfce web documentation}(https://docs.xfce.org/contribute/translate/start).
 
 ## Donations
 
@@ -36,6 +38,8 @@ The [bug tracker](https://bugzilla.xfce.org/) is where those bug reports live. P
 
 Have some Programming/QA/DevOps knowledge? Please, please, please lend a hand to [xfce-test](https://github.com/schuellerf/xfce-test), we need automated tests really bad.
 
+For further details as well check the [related xfce web documentation}(https://docs.xfce.org/contribute/bugs/start).
+
 ## Theming
 
 So you are more into design and maybe CSS is a breeze for you? Good news with gtk3 themes are completely written in CSS, you can even use an preprocessor such as Sass.
@@ -47,10 +51,15 @@ Finally, as a themer what are your contribution options? I would say: contribute
 
 Since you made this far in this section, perhaps you have webdesign skills, if so, improvements to our website are also welcome. You may want to file reports for the [www.xfce.org](https://bugzilla.xfce.org/buglist.cgi?component=General&list_id=44458&product=www.xfce.org&resolution=---) project. Just keep in mind that Xfce's philosophy is about mim
 
+FIXME: Are these old Wiki pages of any help ? (If not so, they should be renamed to "gtk2-theming")
+For further theming details as well check the [related xfce web documentation}(https://wiki.xfce.org/howto#themes).
+
 ## Documentation
 
 Our [wiki](http://wiki.xfce.org/) and [docs](http://docs.xfce.org/) sites contain many helpful pages, but one doesn't need to browse much to notice some have outdated information.
 Do think you can help us with that? Please write a couple of drafts and share them via the [mailing list](https://mail.xfce.org/mailman/listinfo/xfce), we may then give you permissions to edit those pages.
+
+For further documentation details as well check the [related xfce web documentation}(https://docs.xfce.org/contribute/documentation).
 
 ## Coding
 
@@ -59,6 +68,8 @@ This is the most effective way to help, we are always looking for new people to 
 First things first, due Xfce's modular architecture it features several [components](https://xfce.org/projects), some are part of its [core](https://git.xfce.org/xfce) and some are optional [apps](https://git.xfce.org/apps/) or [panel plugins](https://git.xfce.org/panel-plugins/). Take some time to read their description. You might wonder *what the heck is a window manager?* or *I never heard of freedesktop.org or d-bus, are they edible?*. Search for them, I can't possibly explain everything there is to know about Linux desktops in a single blog post.
 
 In my opinion the best way to get started with code is to scratch your own itch, you know, deal with that annoying bug or a behavior that could be improved. The rule of thumb is to browse [Xfce's Bugzilla](https://bugzilla.xfce.org/) and look for that bug or report it in case no one noticed this problem until now. Then go to [Xfce's repository browser](https://git.xfce.org/) and clone the repository for the component you are about to hack. That's easy for me to say, isn't it? I'm going to prove you it is not that hard, let's go step by step.
+
+For further details on coding check the [related xfce web documentation}(https://docs.xfce.org/contribute/dev/start).
 
 #### Building from source
 
@@ -71,7 +82,7 @@ cd xfce4-appfinder
 make
 ```
 
-The `./autogen.sh` command will fail if never build a Xfce component before, we need to have installed development packages for dependencies, unfortunately it's hard to give instructions since package names vary between distributions. In most cases, not panicking and reading the error message helps a lot. For example:
+The `./autogen.sh` command will fail if never build a Xfce component before, we need to have installed development packages for dependencies, unfortunately it's hard to give instructions since package names vary between distributions. In most cases it helps alot to dont panic and read the error message. For example:
 
 ```
 checking for exo-2 >= 0.12.0... not found
@@ -131,13 +142,17 @@ By the way, (I hope that) soon we will move our infra to GitLab, so merge reques
 
 ## Communication
 
-- General user questions? [Xfce's forum](https://forum.xfce.org/) and #xfce at IRC are the best place to get help.
+- General user questions? [Xfce's forum](https://forum.xfce.org/) and #xfce at IRC/Freenode are the best place to get help.
 - Translation stuff? [Xfce-i18n](https://mail.xfce.org/mailman/listinfo/xfce-i18n) mailing list.
 - Stuck with anything related to code? [Xfce4-dev](https://mail.xfce.org/mailman/listinfo/xfce4-dev) mailing list. Besides that #xfce-dev at freenode is where devs hang out. All of us have a real life (I think) and live across different time zones, so once again, be patient and stay online.
 
 ## Conclusion
 
-I didn't know where to tackle this subject, so here it is: do not take the "maintainer" role too seriously, it creates frustration in many ways: someone is trying to figure out how to fix a bug, but that effort seems a waste of time since the maintainer should be much more experienced and able to fix this in the blink of an eye, then people get tired of waiting fixes for old bugs or that fancy feature (*it's an absurd, this bug is from 2008!*), probably the maintainers are lazy or stupid, finally maintainers also get tired and abandon development, after all they have real life issues to handle.
+I didn't know where to tackle this subject, so here it is: do not take the "maintainer" role too seriously, it creates frustration in many ways. 
+E.g. it may look like it a waste of time to search for a fix of a bug, since maintainers should be much more experienced and able to fix this in the blink of an eye.
+Sometimes people get tired of waiting fixes for old bugs or that fancy feature (*it's an absurd, this bug is from 2008!*), probably the maintainers are lazy or stupid.
+--> Please first check if the component is maintained at all ! Even if so, maintainers sometimes get tired and abandon development for various reasons.
+--> There are 1000+ open bugs and all xfce maintainers are unpayed volunteers. Even if you will take a bit longer to fix the bug, if you want to see it fixed, you should do so. Dont rely on somebody else to fix it for you .. you may wait forever.
 
 That's it, I hope this guide covers as much as possible contribution forms as possible, even at the penalty of its length.
 And remember, this is a volunteer-based project not a job, so have fun!
